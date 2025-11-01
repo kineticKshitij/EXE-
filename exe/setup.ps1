@@ -20,7 +20,8 @@ if ($LASTEXITCODE -ne 0) {
     if ($continue -ne 'y') {
         exit 1
     }
-} else {
+}
+else {
     Write-Host "✅ PostgreSQL found: $pgVersion" -ForegroundColor Green
 }
 
@@ -29,7 +30,8 @@ Write-Host "`n🔧 Setting up virtual environment..." -ForegroundColor Yellow
 if (-Not (Test-Path "venv")) {
     python -m venv venv
     Write-Host "✅ Virtual environment created" -ForegroundColor Green
-} else {
+}
+else {
     Write-Host "✅ Virtual environment already exists" -ForegroundColor Green
 }
 
@@ -61,7 +63,8 @@ python manage.py makemigrations
 python manage.py migrate
 if ($LASTEXITCODE -ne 0) {
     Write-Host "⚠️  Migration failed. Please check your database connection." -ForegroundColor Yellow
-} else {
+}
+else {
     Write-Host "✅ Migrations completed" -ForegroundColor Green
 }
 

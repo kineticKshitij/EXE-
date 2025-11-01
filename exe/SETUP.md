@@ -26,6 +26,7 @@ cd D:\Exe+\exe
 ```
 
 The script will:
+
 - ✅ Create virtual environment
 - ✅ Install dependencies
 - ✅ Run database migrations
@@ -122,9 +123,9 @@ python manage.py runserver
 
 Once the server is running, access:
 
-- **Swagger UI**: http://localhost:8000/api/docs/
-- **API Schema**: http://localhost:8000/api/schema/
-- **Admin Panel**: http://localhost:8000/admin/
+- **Swagger UI**: <http://localhost:8000/api/docs/>
+- **API Schema**: <http://localhost:8000/api/schema/>
+- **Admin Panel**: <http://localhost:8000/admin/>
 
 ---
 
@@ -160,6 +161,7 @@ Content-Type: application/json
 ```
 
 **Response:**
+
 ```json
 {
   "user": {
@@ -292,6 +294,7 @@ django.db.utils.OperationalError: could not connect to server
 ```
 
 **Solution:**
+
 - Ensure PostgreSQL is running: `pg_ctl status`
 - Check `.env` database credentials
 - Verify PostgreSQL accepts connections on port 5432
@@ -303,6 +306,7 @@ ModuleNotFoundError: No module named 'rest_framework'
 ```
 
 **Solution:**
+
 - Activate virtual environment: `.\venv\Scripts\Activate.ps1`
 - Reinstall dependencies: `pip install -r requirements.txt`
 
@@ -313,6 +317,7 @@ django.db.migrations.exceptions.InconsistentMigrationHistory
 ```
 
 **Solution:**
+
 - Drop and recreate database
 - Delete migration files (except `__init__.py`)
 - Run `makemigrations` and `migrate` again
@@ -338,6 +343,7 @@ Key environment variables in `.env`:
 ## 📞 Support
 
 For issues or questions:
+
 - Check the [Troubleshooting](#-troubleshooting) section
 - Review API documentation at `/api/docs/`
 - Check Django logs for detailed error messages

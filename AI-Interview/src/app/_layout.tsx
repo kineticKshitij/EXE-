@@ -3,6 +3,7 @@ import "@/utils/fetch-polyfill";
 
 import { Stack } from "expo-router";
 import { NativeStackNavigationOptions } from "@react-navigation/native-stack";
+import { AuthProvider } from "../context/AuthContext";
 
 export { ErrorBoundary } from "expo-router";
 
@@ -11,20 +12,37 @@ const DEFAULT_STACK_HEADER: NativeStackNavigationOptions =
   process.env.EXPO_OS !== "ios"
     ? {}
     : {
-        headerTransparent: false,
-        headerShadowVisible: true,
-        headerLargeTitleShadowVisible: false,
-      };
+      headerTransparent: false,
+      headerShadowVisible: true,
+      headerLargeTitleShadowVisible: false,
+    };
 
 export default function Layout() {
   return (
-    <Stack screenOptions={DEFAULT_STACK_HEADER}>
-      <Stack.Screen
-        name="index"
-        options={{
-          title: "Expo Chat",
-        }}
-      />
-    </Stack>
+    <AuthProvider>
+      <Stack screenOptions={DEFAULT_STACK_HEADER}>
+        <Stack.Screen
+          name="index"
+          options={{
+            title: "EXE+ AI Interview",
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="login"
+          options={{
+            title: "Login",
+            headerShown: true,
+          }}
+        />
+        <Stack.Screen
+          name="register"
+          options={{
+            title: "Register",
+            headerShown: true,
+          }}
+        />
+      </Stack>
+    </AuthProvider>
   );
 }
