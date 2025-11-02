@@ -10,6 +10,7 @@
 ## 🚀 Features
 
 ### Current Features (v0.1)
+
 - ✅ **User Authentication** - JWT-based secure authentication system
 - ✅ **Multi-role Support** - Student, Teacher, Recruiter, and Admin roles
 - ✅ **Dark Theme UI** - Modern, responsive dark-themed interface
@@ -17,6 +18,7 @@
 - ✅ **Real-time API** - RESTful API with comprehensive documentation
 
 ### Coming Soon
+
 - 🔜 **AI-Powered Interviews** - Practice with AI interviewer
 - 🔜 **Exam Simulations** - Take mock exams with instant feedback
 - 🔜 **Performance Analytics** - Track your progress over time
@@ -26,12 +28,14 @@
 ## 📋 Prerequisites
 
 ### Backend Requirements
+
 - Python 3.13+
 - PostgreSQL 18+
 - Redis (for Celery and Channels)
 - pip and virtualenv
 
 ### Frontend Requirements
+
 - Node.js 18+ and npm
 - Expo CLI
 - iOS/Android development environment (optional)
@@ -39,6 +43,7 @@
 ## 🛠️ Installation
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/kineticKshitij/EXE-.git
 cd EXE-
@@ -47,6 +52,7 @@ cd EXE-
 ### 2. Backend Setup
 
 #### Install Dependencies
+
 ```bash
 cd exe
 python -m venv venv
@@ -61,7 +67,9 @@ pip install -r requirements.txt
 ```
 
 #### Configure Environment
+
 Create a `.env` file in the `exe` directory:
+
 ```env
 SECRET_KEY=your-secret-key-here
 DEBUG=True
@@ -74,6 +82,7 @@ CORS_ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8081,http://localhos
 ```
 
 #### Setup Database
+
 ```bash
 # Create PostgreSQL database
 createdb exe_db
@@ -87,6 +96,7 @@ python manage.py createsuperuser
 ```
 
 #### Start Backend Server
+
 ```bash
 python manage.py runserver
 ```
@@ -98,18 +108,22 @@ API Documentation: `http://127.0.0.1:8000/api/docs/`
 ### 3. Frontend Setup
 
 #### Install Dependencies
+
 ```bash
 cd AI-Interview
 npm install
 ```
 
 #### Configure Environment
+
 Create a `.env` file in the `AI-Interview` directory:
+
 ```env
 EXPO_PUBLIC_API_URL=http://127.0.0.1:8000/api/v1
 ```
 
 #### Start Frontend
+
 ```bash
 npx expo start
 ```
@@ -122,6 +136,7 @@ npx expo start
 ## 📱 Tech Stack
 
 ### Backend
+
 - **Framework**: Django 5.2.7
 - **API**: Django REST Framework 3.15.2
 - **Database**: PostgreSQL 18
@@ -131,6 +146,7 @@ npx expo start
 - **Documentation**: drf-spectacular 0.27.2
 
 ### Frontend
+
 - **Framework**: React Native 0.81.4
 - **Platform**: Expo SDK 54.0.1
 - **Routing**: Expo Router 6.0.0
@@ -140,6 +156,7 @@ npx expo start
 - **Storage**: AsyncStorage
 
 ### AI/ML (Planned)
+
 - OpenAI API
 - Speech-to-Text / Text-to-Speech
 
@@ -178,41 +195,49 @@ EXE+/
 ## 🔑 API Endpoints
 
 ### Authentication
+
 - `POST /api/v1/auth/register/` - User registration
 - `POST /api/v1/auth/login/` - User login
 - `POST /api/v1/auth/logout/` - User logout
 - `POST /api/v1/auth/token/refresh/` - Refresh JWT token
 
 ### Users
+
 - `GET /api/v1/users/me/` - Get current user profile
 - `PATCH /api/v1/users/update_profile/` - Update user profile
 - `POST /api/v1/users/change_password/` - Change password
 - `GET /api/v1/users/sessions/` - List active sessions
 
 ### Documentation
+
 - `GET /api/docs/` - Swagger UI documentation
 - `GET /api/schema/` - OpenAPI schema
 
 ## 🎨 Screenshots
 
 ### Dashboard
+
 Modern dark-themed dashboard with performance stats, quick actions, and recent activity.
 
 ### Authentication
+
 Secure login and registration with comprehensive error handling.
 
 ### Custom Cursor
+
 Premium custom cursor effect on web platform.
 
 ## 🧪 Testing
 
 ### Backend Tests
+
 ```bash
 cd exe
 python manage.py test
 ```
 
 ### Frontend Tests
+
 ```bash
 cd AI-Interview
 npm test
@@ -247,6 +272,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👨‍💻 Author
 
 **Kshitij**
+
 - GitHub: [@kineticKshitij](https://github.com/kineticKshitij)
 
 ## 🙏 Acknowledgments
@@ -258,31 +284,36 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Support
 
-For support, email your-email@example.com or create an issue in the repository.
+For support, email <your-email@example.com> or create an issue in the repository.
 
 ## 🗺️ Roadmap
 
 ### Phase 1 (Current) - Authentication & UI ✅
+
 - User registration and login
 - JWT authentication
 - Dark themed dashboard
 
 ### Phase 2 - Core Features 🔄
+
 - Exam management system
 - Interview simulation
 - AI question generation
 
 ### Phase 3 - Analytics & Reports
+
 - Performance tracking
 - Detailed analytics
 - Export functionality
 
 ### Phase 4 - Premium Features
+
 - Subscription tiers
 - Advanced AI features
 - Video interviews
 
 ### Phase 5 - Social & Gamification
+
 - Leaderboards
 - Achievements
 - Study groups

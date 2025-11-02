@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, ActivityIndicator, Platform } from 'react-native';
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from 'expo-router';
 import { Chat } from "@/components/chat";
 import { Navbar } from "@/components/navbar";
@@ -78,16 +78,32 @@ export default function Page() {
 
             {/* Quick Actions */}
             <View className="flex-row flex-wrap gap-4">
-              <TouchableOpacity className="bg-blue-600 hover:bg-blue-700 rounded-xl px-8 py-4 flex-row items-center">
-                <Text className="text-white font-semibold text-lg">Start New Interview</Text>
+              <TouchableOpacity
+                onPress={() => router.push('/exams')}
+                className="bg-blue-600 hover:bg-blue-700 rounded-xl px-8 py-4 flex-row items-center"
+              >
+                <Text className="text-white font-semibold text-lg">Browse Exams</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity className="bg-gray-800 hover:bg-gray-700 rounded-xl px-8 py-4 flex-row items-center border border-gray-700">
-                <Text className="text-white font-semibold text-lg">Practice Exam</Text>
+              <TouchableOpacity
+                onPress={() => router.push('/interviews')}
+                className="bg-gray-800 hover:bg-gray-700 rounded-xl px-8 py-4 flex-row items-center border border-gray-700"
+              >
+                <Text className="text-white font-semibold text-lg">Browse Interviews</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity className="bg-gray-800 hover:bg-gray-700 rounded-xl px-8 py-4 flex-row items-center border border-gray-700">
+              <TouchableOpacity
+                onPress={() => router.push('/analytics')}
+                className="bg-gray-800 hover:bg-gray-700 rounded-xl px-8 py-4 flex-row items-center border border-gray-700"
+              >
                 <Text className="text-white font-semibold text-lg">View Analytics</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => router.push('/payments')}
+                className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl px-8 py-4 flex-row items-center"
+              >
+                <Text className="text-white font-semibold text-lg">⭐ Upgrade to Pro</Text>
               </TouchableOpacity>
             </View>
           </View>

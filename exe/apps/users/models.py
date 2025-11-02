@@ -99,7 +99,7 @@ class UserSession(models.Model):
     Track user sessions for security and analytics
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sessions')
-    session_key = models.CharField(max_length=40, unique=True)
+    session_key = models.CharField(max_length=40, blank=True, null=True)
     ip_address = models.GenericIPAddressField()
     user_agent = models.TextField()
     device_type = models.CharField(max_length=50, blank=True)  # mobile, desktop, tablet

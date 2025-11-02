@@ -85,9 +85,13 @@ class UserLoginView(generics.GenericAPIView):
         ip_address = get_client_ip(request)
         user_agent = request.META.get('HTTP_USER_AGENT', '')
         
+        # Generate unique session key if not available
+        import uuid
+        session_key = request.session.session_key or str(uuid.uuid4())
+        
         UserSession.objects.create(
             user=user,
-            session_key=request.session.session_key or '',
+            session_key=session_key,
             ip_address=ip_address,
             user_agent=user_agent
         )

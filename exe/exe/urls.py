@@ -16,12 +16,12 @@ urlpatterns = [
     
     # App URLs
     path('api/v1/', include('apps.users.urls')),
-    # path('api/v1/exams/', include('apps.exams.urls')),
-    # path('api/v1/interviews/', include('apps.interview.urls')),
+    path('api/v1/', include('apps.exams.urls')),
+    path('api/v1/', include('apps.interview.urls')),
+    path('api/v1/', include('apps.analytics.urls')),
+    path('api/v1/', include('apps.payments.urls')),
     # path('api/v1/ai/', include('apps.ai_engine.urls')),
-    # path('api/v1/analytics/', include('apps.analytics.urls')),
     # path('api/v1/notifications/', include('apps.notifications.urls')),
-    # path('api/v1/payments/', include('apps.payments.urls')),
 ]
 
 # Serve media files in development
